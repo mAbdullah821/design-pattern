@@ -1,6 +1,6 @@
-import Observer from './Observer';
-import Strategy from './Strategy';
-import TemplateMethod from './Template Method';
+import Observer from './observer';
+import Strategy from './strategy';
+import TemplateMethod from './template-method';
 
 console.log('Hello, TypeScript!');
 
