@@ -10,8 +10,6 @@ export class SnapshotHistory {
     this.originator = originator;
     this.previousHistory = [];
     this.nextHistory = [];
-
-    this.backup();
   }
 
   public backup(): void {
@@ -23,9 +21,10 @@ export class SnapshotHistory {
   //--------------------------------------------------------------------------------------------------------------
 
   public undo(): void {
-    if (this.previousHistory.length) this.nextHistory.push(this.previousHistory.pop() as CanvasSnapshot);
+    if (this.previousHistory.length <= 1) return;
 
-    if (this.previousHistory.length) this.originator.restore(this.previousHistory.at(-1) as CanvasSnapshot);
+    this.nextHistory.push(this.previousHistory.pop() as CanvasSnapshot);
+    this.originator.restore(this.previousHistory.at(-1) as CanvasSnapshot);
   }
 
   //--------------------------------------------------------------------------------------------------------------

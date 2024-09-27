@@ -13,6 +13,13 @@ export default () => {
   caretaker.backup();
   canvas.print();
 
+  canvas.doSomething();
+  caretaker.backup();
+  canvas.print();
+
+  caretaker.undo();
+  canvas.print();
+
   caretaker.undo();
   canvas.print();
 
