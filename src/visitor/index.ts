@@ -4,7 +4,7 @@ import { TextFile } from './text-file.class';
 import { WordCounterVisitor } from './word-counter-visitor.class';
 
 export default () => {
-  const textFile = new TextFile('Hello World, How Are You?');
+  const textFile = new TextFile('Hello World How Are You?');
   const spreadSheet = new SpreadSheet('Hello,World,How,Are,You?');
 
   const textExtractorVisitor = new TextExtractorVisitor();

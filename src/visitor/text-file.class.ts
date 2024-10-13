@@ -1,22 +1,7 @@
-import { IDocument } from './document.interface';
-import { IFeatureVisitor } from './feature-visitor.interface';
+import { Document } from './document.class';
 
-export class TextFile implements IDocument {
-  data: string;
-
+export class TextFile extends Document {
   constructor(data: string) {
-    this.data = data;
-  }
-
-  setData(data: string): void {
-    this.data = data;
-  }
-
-  getData(): string {
-    return this.data;
-  }
-
-  accept(visitor: IFeatureVisitor): void {
-    visitor.visit(this);
+    super(data);
   }
 }
