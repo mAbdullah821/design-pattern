@@ -3,6 +3,7 @@ import Strategy from './strategy';
 import TemplateMethod from './template-method';
 import Memento from './memento';
 import Visitor from './visitor';
+import Iterator from './iterator';
 
 console.log('Hello, TypeScript!');
 
@@ -10,4 +11,5 @@ console.log('Hello, TypeScript!');
 // Strategy();
 // TemplateMethod();
 // Memento();
-Visitor();
+// Visitor();
+Iterator();
